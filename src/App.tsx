@@ -7,8 +7,8 @@ function App() {
   return (
     <>
       <MantineProvider>
-        <Card>
-          <Text>hogehgoe</Text>
+        <Card shadow='lg'>
+          <Text fs="italic">hogehgoe</Text>
         </Card>
       </MantineProvider>
     </>
