@@ -1,15 +1,15 @@
 import MainLayout from '../layouts/MainLayout'
 import Sidebar from '../components/Sidebar'
-import ProtectedRoutes from '../components/ProtectedRoutes'
+import { List, Text } from '@mantine/core'
 
 function Home() {
   return (
     <>
       <MainLayout>
-        <ProtectedRoutes>
+        <>
           <Sidebar />
-          HOME PAGE
-        </ProtectedRoutes>
+          <Text c='blue'>home page</Text>
+        </>
       </MainLayout>
     </>
   )
