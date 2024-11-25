@@ -19,19 +19,18 @@ export const useUserStore = create<UserState>()(
       fullname: '',
       email: '',
       avatarUrl: null,
-
       updateProfileImage: (image: string) => set({ avatarUrl: image }),
       updateUsername: (name: string) => set({ fullname: name }),
       setUser: (user) =>
         set({
-          id: user.id || undefined,
+          id: user.id ?? undefined,
           avatarUrl: user.avatarUrl,
           fullname: user.fullname,
           email: user.email
         })
     }),
     {
-      name: 'user-storage'
+      name: 'user-store'
     }
   )
 )
