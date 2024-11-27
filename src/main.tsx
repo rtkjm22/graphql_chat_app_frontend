@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './index.css'
+import '@mantine/core/styles.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import { ApolloProvider } from '@apollo/client'
