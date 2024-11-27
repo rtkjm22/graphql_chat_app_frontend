@@ -28,7 +28,6 @@ function Sidebar() {
   ))
 
   const userId = useUserStore((state) => state.id)
-  const user = useUserStore((state) => state)
   const setUser = useUserStore((state) => state.setUser)
   const toggleLoginModal = useGeneralStore((state) => state.toggleLoginModal)
   const [logoutUser, { loading, error }] = useMutation(LOGOUT_USER, {
@@ -51,8 +50,9 @@ function Sidebar() {
     <Box
       style={(theme) => ({
         position: 'fixed',
+        left: 0,
         zIndex: 100,
-        borderRight: `1px solid ${theme.colors.gray[6]}`,
+        borderRight: `1px solid ${theme.colors.gray[2]}`,
         height: '100vh'
       })}
       p="md"
