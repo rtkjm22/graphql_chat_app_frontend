@@ -6,12 +6,13 @@ import {
   IconUser,
   IconLogout,
   IconBrandMessenger,
+  IconMessages,
   IconLogin
 } from '@tabler/icons-react'
 import { useMutation } from '@apollo/client'
 import { LOGOUT_USER } from '../graphql/mutations/Logout'
 
-const mockdata = [{ icon: IconBrandMessenger, label: 'messenger' }]
+const mockdata = [{ icon: IconMessages, label: 'messenger' }]
 
 function Sidebar() {
   const toggleProfileSettingsModal = useGeneralStore(
@@ -22,6 +23,11 @@ function Sidebar() {
     <NavLink
       {...link}
       key={link.label}
+      label={
+        <Center>
+          <link.icon size={24} stroke={1.5} />
+        </Center>
+      }
       active={index === active}
       onClick={() => setActive(index)}
     />
