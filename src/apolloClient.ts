@@ -49,8 +49,9 @@ const wsLink = new WebSocketLink({
   }
 })
 
-const errorLink = onError(({ GraphQLErrors, operation, forward }) => {
-  for (const err of GraphQLErrors) {
+const errorLink = onError(({ GraphQLErros, operation, forward }) => {
+  if (!GraphQLErros) return
+  for (const err of GraphQLErros) {
     if (err.extensions.code === 'UNAUTHENTICATED' && retryCount < maxRetry) {
       retryCount++
       return new Observable((observer) => {

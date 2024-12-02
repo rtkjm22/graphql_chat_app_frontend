@@ -4,9 +4,10 @@ export const UPDATE_PROFILE = gql`
   mutation UpdateProfile(
     $fullname: String!
     $file: Upload
-    $chatroomId: Float
+    # $chatroomId: Float
   ) {
-    updateProfile(fullname: $fullname, file: $file, chatroomId: $chatroomId) {
+    updateProfile(fullname: $fullname, file: $file) {
+    # updateProfile(fullname: $fullname, file: $file, chatroomId: $chatroomId) {
       id
       fullname
       avatarUrl

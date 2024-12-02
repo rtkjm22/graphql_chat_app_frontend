@@ -1,8 +1,8 @@
 import MainLayout from '../layouts/MainLayout'
 import Sidebar from '../components/Sidebar'
 import ProtectedRoutes from '../components/ProtectedRoutes'
-import { Text } from '@mantine/core'
 import AuthOverlay from '../components/AuthOverlay'
+import ProfileSettings from '../components/ProfileSettings'
 
 function Home() {
   return (
@@ -10,8 +10,8 @@ function Home() {
       <MainLayout>
         <ProtectedRoutes>
           <AuthOverlay />
+          <ProfileSettings />
           <Sidebar />
-          <Text bg={'blue'}>hogehoge</Text>
         </ProtectedRoutes>
       </MainLayout>
     </>
