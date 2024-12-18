@@ -17,7 +17,7 @@ import {
   ScrollArea,
   Text
 } from '@mantine/core'
-import { IconPlus } from '@tabler/icons-react'
+import { IconPlus, IconX } from '@tabler/icons-react'
 
 function RoomList() {
   const toggleCreateRoomModal = useGeneralStore(
@@ -146,6 +146,16 @@ function RoomList() {
                           <Text c="dimmed">No Messages</Text>
                         </Flex>
                       )}
+                      <Flex h={'100%'} align={'end'} justify={'end'}>
+                        <Button
+                          p={0}
+                          variant="light"
+                          color="red"
+                          onClick={() => deleteChatroom()}
+                        >
+                          <IconX />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Card>
                 </Link>

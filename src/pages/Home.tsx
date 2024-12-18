@@ -5,18 +5,25 @@ import AuthOverlay from '../components/AuthOverlay'
 import ProfileSettings from '../components/ProfileSettings'
 import RoomList from '../components/RoomList'
 import AddChatroom from '../components/AddChatroom'
+import { Flex } from '@mantine/core'
+import JoinRoomOrChatwindow from '../components/JoinRoomOrChatwindow'
 
 function Home() {
   return (
     <>
       <MainLayout>
-        <ProtectedRoutes>
+        <>
           <AuthOverlay />
           <ProfileSettings />
           <Sidebar />
-          <AddChatroom />
-          <RoomList />
-        </ProtectedRoutes>
+          <ProtectedRoutes>
+            <AddChatroom />
+            <Flex w={"100%"} direction={{ base: 'column', sm: 'row' }}>
+              <RoomList />
+              <JoinRoomOrChatwindow />
+            </Flex>
+          </ProtectedRoutes>
+        </>
       </MainLayout>
     </>
   )

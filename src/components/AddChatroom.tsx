@@ -127,7 +127,11 @@ function AddChatroom() {
     })) || []
 
   return (
-    <Modal opened={isCreateRoomModalOpen} onClose={toggleCreateRoomModal}>
+    <Modal
+      opened={isCreateRoomModalOpen}
+      onClose={toggleCreateRoomModal}
+      centered
+    >
       <Stepper active={active} onStepClick={setActive} orientation={'vertical'}>
         <Stepper.Step label="ステップ1" description="チャットルームの作成">
           <div>チャットルームの作成</div>
